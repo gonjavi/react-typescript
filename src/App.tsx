@@ -1,6 +1,8 @@
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import React, { Component } from 'react';
+import Message from './Message';
+
 
 class App extends Component {
   render() {
@@ -12,6 +14,16 @@ class App extends Component {
 
     // tuple
     let aTuple: [string, number] = ['Manny', 34];
+    // enum -similar to object
+    enum Codes {first = 1, second = 3};
+
+    // any
+    let firstName: any = 'Manny';
+
+    // void - despues de () se escribe el renurning type - sino tiene se pone void 
+    const warning = (): void => {
+      console.log('Warning')
+    }
 
     return (
 
@@ -19,9 +31,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         
-          <p>
-            The value {aTuple[0]} is of {typeof aTuple[0]} type!
-          </p>
+          <Message  message= 'this is a simple message' />
         
         </header>
       </div>
