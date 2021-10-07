@@ -24,3 +24,4 @@ const messageHoc = (WrappedComponent: any) => {
 export default messageHoc;
 
 
+
